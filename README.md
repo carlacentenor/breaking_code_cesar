@@ -13,12 +13,15 @@ Diagrama de flujo Función menú principal
 
 ![Con titulo](assets/docs/funcionmenu.png "Cifrado")
 
-La web esta conformada por un página principal llamada Index.html que contiene una función que aloja las dos funciones de cifrado y decifrado, y las llama mediante un **prompt** , dependiendo de la opción que elija el usuario
+La web esta conformada por un página principal llamada Index.html que contiene una función llamada **useroption(num)** que recibe un parametro , que es el número de la opción requerida . Esta función aloja las dos funciones de cifrado y decifrado, y las llama mediante un **prompt** , dependiendo de la opción que elija el usuario
 
 * Opción 1 : Cifrado César
 * Opción 2 : Descifrado César
 * Opción 3 : Salir
-* Existe una validación si el usuario ingresa otra opción no mencionada, mostrará regresara al **prompt** hasta que se ingrese una opción válida.
+
+ Existe una validación si el usuario ingresa otra opción no mencionada, mostrará regresara al **prompt** hasta que se ingrese una opción válida.
+
+ Este menú se encuentra fuera de la función useroption(num) y es invocado mediante una estructura Do - While . Dentro de esta estructura hay un **prompt** que describe las opciones del menú y valida el ingreso de datos.
 
 Ambas opciones (cifrado y decifrado ) obtienen la entrada de datos mediante un **prompt** y muestra el texto convertido en la página web.
 
@@ -65,7 +68,7 @@ var valueCapitalLetter = (numberCodeAscii-65 +33)%26 + 65;
 *  Concatenar cada nueva letra obtenida a la variable codeCipher.
 * Si hay un espacio, solo se reasigna su valor y se concatena.
 
-*  Mostrar la palabra convertida en la página web Index.html.
+*  Mostrar la palabra convertida en  un alert.
 
 ### Especificaciones de la función decipher
 
@@ -99,4 +102,14 @@ var valueLetterLower =  (numberCodeAscii+97-45)%26-97
 *  Concatenar cada nueva letra obtenida a la variable codeCipher.
 
 * Si hay un espacio, solo se reasigna su valor y se concatena.
-*  Mostrar la palabra convertida en la página web Index.html.
+*  Mostrar la palabra convertida en un alert.
+
+### Especificaciones de la función useroption(num)
+La función useroption(num) almacena dentro de ella las funciones de cifrado y decifrado.
+* Crear un **if** , con la primera condición
+num ==="1"  que llamará a la función cifrado.
+*  Dentro de ella se alojara el código de cifrado cesar mencionado anteriormente.
+* Crear un  **else if** con la opción num ==="2" que llamará a la función decifrado.
+* Dentro de ella se alojara el código de decifrado cesar mencionado anteriormente.
+
+* Salir de esta función e invocarla mediante una estructura Do - While, que almacena un prompt con las opciones del menú y una validación que no ingrese otro valor diferente 1,2 o 3.
