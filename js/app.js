@@ -1,4 +1,4 @@
-function useroption(num){ // creaci
+function useroption(num){ // creacion del menú principal
 if(num==="1"){
   function cipher(){
 
@@ -8,7 +8,7 @@ if(num==="1"){
         while (!string || !/^[a-zA-Z\s]*$/.test(string) ); // valida que solo ingrese  texto y espacios entre texto
 
 
-        var codeCipher ="";
+        var codeCipher =""; // creacion de variable que alojara el resultado final
 
 
         for(i=0;i<string.length;i++){
@@ -28,7 +28,7 @@ if(num==="1"){
 
                 }
               else if(numberCodeAscii==32){  // si el caracter es un espacio vacio
-                    var space = " ";
+                    var space = " "; // se devuelve el mismo valor
                     codeCipher+=space;
                 }
 
@@ -40,7 +40,7 @@ if(num==="1"){
   cipher(); // llama a la función
 
 }
-
+/*****************************DECIFRADO DE CESAR**********************************/
 else if (num === "2"){
 
     function decipher(){
